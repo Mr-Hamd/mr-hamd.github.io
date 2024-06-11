@@ -4,10 +4,12 @@ body {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   background-color: #121212;
+   color: #ffffff;
 }
 header {
-   background-color: #4CAF50;
-   color: white;
+   background-color: #1e1e1e;
+   color: #ffffff;
    text-align: center;
    padding: 1em 0;
 }
@@ -16,17 +18,19 @@ nav ul {
    padding: 0;
    display: flex;
    justify-content: center;
-   background-color: #333;
+   background-color: #1e1e1e;
    margin: 0;
 }
 nav ul li {
-   margin: 0 1em;
+   margin: 0 0.5em;
 }
 nav ul li a {
-   color: white;
+   color: #ffffff;
    text-decoration: none;
    padding: 0.5em 1em;
    display: block;
+   background-color: #333333;
+   border-radius: 5px;
 }
 nav ul li a:hover {
    background-color: #575757;
@@ -38,17 +42,18 @@ button {
    display: block;
    margin-bottom: 1em;
    padding: 0.5em 1em;
-   background-color: #4CAF50;
-   color: white;
+   background-color: #ff3b3f;
+   color: #ffffff;
    border: none;
    border-radius: 5px;
    cursor: pointer;
 }
 button:hover {
-   background-color: #45a049;
+   background-color: #ff6165;
 }
 h1, h2, h3 {
    margin: 0.5em 0;
+   color: #ff3b3f;
 }
 form {
    display: flex;
@@ -61,6 +66,10 @@ input, select, textarea {
    margin-top: 0.5em;
    padding: 0.5em;
    font-size: 1em;
+   background-color: #333333;
+   color: #ffffff;
+   border: 1px solid #444444;
+   border-radius: 5px;
 }
 textarea {
    resize: vertical;
@@ -68,13 +77,30 @@ textarea {
 .review {
    margin: 1em 0;
    padding: 1em;
-   border: 1px solid #ccc;
+   border: 1px solid #444444;
    border-radius: 5px;
    cursor: pointer;
+   background-color: #1e1e1e;
 }
 .review h3 {
    margin: 0;
+   color: #ffffff;
 }
 .review p {
    margin: 0.5em 0;
+   color: #b0b0b0;
+}
+@media (max-width: 600px) {
+   nav ul {
+       flex-direction: column;
+   }
+   nav ul li {
+       margin: 0.5em 0;
+   }
+   button {
+       width: 100%;
+   }
+   form {
+       width: 100%;
+   }
 }
