@@ -3,28 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sign Up - Rate This Spot</title>
+<title>Reviews - Rate This Spot</title>
 <link rel="stylesheet" href="styles.css">
+<script>
+       function toggleDescription(id) {
+           var fullDescription = document.getElementById('full-' + id);
+           var shortDescription = document.getElementById('short-' + id);
+           if (fullDescription.style.display === 'none') {
+               fullDescription.style.display = 'block';
+               shortDescription.style.display = 'none';
+           } else {
+               fullDescription.style.display = 'none';
+               shortDescription.style.display = 'block';
+           }
+       }
+</script>
 </head>
 <body>
 <header>
 <h1>Rate This Spot</h1>
+<nav>
+<ul>
+<li><a href="login.html">Login</a></li>
+<li><a href="sign-up.html">Sign Up</a></li>
+<li><a href="reviews.html">Reviews</a></li>
+<li><a href="add-review.html">Add Review</a></li>
+</ul>
+</nav>
 </header>
 <main>
-<section id="sign-up">
-<h2>Sign Up</h2>
-<form>
-<label for="username">Username:</label>
-<input type="text" id="username" name="username" required>
-<label for="email">Email:</label>
-<input type="email" id="email" name="email" required>
-<label for="password">Password:</label>
-<input type="password" id="password" name="password" required>
-<label for="confirm-password">Confirm Password:</label>
-<input type="password" id="confirm-password" name="confirm-password" required>
-<button type="submit">Sign Up</button>
-</form>
-<p>Already have an account? <a href="login.html">Login</a></p>
+<button onclick="history.back()">Back</button>
+<section id="reviews">
+<h2>Saved Reviews</h2>
+<div class="review" onclick="toggleDescription(1)">
+<h3>Central Park</h3>
+<p id="short-1">4.5 ★ - Beautiful park with lots of green spaces...</p>
+<p id="full-1" style="display:none;">Central Park is a fantastic place to relax and enjoy nature. The greenery is vast, and there are plenty of spots to have a picnic or just sit and enjoy the view.</p>
+</div>
+<div class="review" onclick="toggleDescription(2)">
+<h3>Brooklyn Bridge</h3>
+<p id="short-2">4.0 ★ - Iconic bridge with great views...</p>
+<p id="full-2" style="display:none;">Walking across the Brooklyn Bridge offers stunning views of Manhattan and Brooklyn. It's a bit crowded, but the experience is worth it.</p>
+</div>
+<div class="review" onclick="toggleDescription(3)">
+<h3>Empire State Building</h3>
+<p id="short-3">4.7 ★ - Must-see landmark with panoramic views...</p>
+<p id="full-3" style="display:none;">The Empire State Building offers a breathtaking view of New York City. The observation deck is a bit pricey, but the view is unbeatable, especially at sunset.</p>
+</div>
 </section>
 </main>
 </body>
